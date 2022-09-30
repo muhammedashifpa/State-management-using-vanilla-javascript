@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/login-credentials.css">
+    <link rel="stylesheet" href="assets/css/merge-user-accounts.css">
+    <link rel="stylesheet" href="assets/css/personal-info.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/user-role.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <header>
+            <nav class="navbar navbar-light navbar-expand-md">
+                <div class="container-fluid"><a class="navbar-brand" href="#"><img src="assets/img/logo.svg"></a>
+                    <div class="d-flex align-items-center align-items-sm-center mobile-profile"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link active" href="#" txt-key="txtUserMenu">User</a></li>
+                            <li class="nav-item"><a class="nav-link" id="admin-id" href="/oauth/services" txt-key="txtAdminMenu">Admin</a></li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto burger-user-info">
+                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link d-none d-sm-none d-md-flex d-lg-flex d-xl-flex align-items-center align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center" aria-expanded="false" data-toggle="dropdown" href="#">&nbsp;&nbsp;<span id="profile-name-header"><br></span><img id="user-img-id" class="profile__photo-header" src="assets/img/avatar-placeholder.png"></a>
+                                <div class="dropdown-menu"><a class="dropdown-item" id="logout-id" href="/oauth/v2/logout">Logout</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="main">
+            <div class="sidebar">
+                <ul class="list-sidebar">
+                    <li><a href="home.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>&nbsp;<span txt-key="txtSidebarMenuHome">Home</span></a></li>
+                    <li><a class="active" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>&nbsp;<span txt-key="txtSidebarMenuPersonalInfo">Personal info</span></a></li>
+                    <li><a href="login-credentials.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>&nbsp;<span txt-key="txtSidebarMenuLoginCredentials">Login credentials</span></a></li>
+                    <li><a href="user-roles.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>&nbsp;<span txt-key="txtSidebarMenuUserRoles">User roles</span></a></li>
+                    <li><a href="../community/communities.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>&nbsp;<span txt-key="txtSidebarMenuCommunities">Communities</span></a></li>
+                </ul>
+            </div>
+            <div class="comman-padding">
+                <div class="container">
+                    <div class="comman-title personal__item d-flex justify-content-between align-items-center position-relative flex-column flex-sm-row">
+                        <div class="text-center text-sm-left">
+                            <h1 txt-key="txtPersonalHeading">Personal information<br></h1>
+                            <p txt-key="txtPersonalDescription">See and manage your personal information details<br></p>
+                        </div>
+                        <div class="personal__item-right d-flex mb-3 m-sm-0"><button class="btn btn-primary btn-cancel disabled" id="personal-info-cancel" type="button" txt-key="txtBtnCancel">Cancel</button><button class="btn btn-primary btn-save disabled" id="personal-info-save" type="button" txt-key="txtSaveChangesBtn">Save changes<br></button></div>
+                        <div id="modal-updated" class="modal__updated d-none"><img src="assets/img/update.png"><span class="modal__updated-text" txt-key="txtPersonalUpdateNotify">Personal details updated<br></span><button class="btn btn-primary modal__close bg-transparent border-0 modal__updated-btn" id="update-close-btn-id" type="button"><img src="assets/img/icon_x.svg"></button></div>
+                    </div>
+                    <ul class="profile__list list-unstyled">
+                        <li class="personal__list-row row flex-column align-items-start flex-sm-row align-items-sm-center">
+                            <div class="col-12 col-sm-5 p-0 d-flex">
+                                <h4 class="profile__list-title m-0 p-0" txt-key="txtProfileListItemProfile">Profile photo<br></h4>
+                            </div>
+                            <div class="col-12 col-sm-7 d-flex align-items-center p-0"><img id="new-profile-photo" class="profile__photo" src="assets/img/avatar-placeholder.png" width="44" height="44"><label class="m-0 personal__input-photo" for="add-user-photo">Change<input type="file" id="add-user-photo" name="profilePhoto" class="d-none personal__list-input"></label><button class="btn btn-primary bg-transparent border-0 personal__list-btn" id="clear-user-photo" type="button"><img src="assets/img/icon_trash-2.svg" width="24" height="24"></button></div>
+                        </li>
+                        <li class="personal__list-row row flex-column align-items-start flex-sm-row align-items-sm-center">
+                            <div class="col-12 col-sm-5 p-0 d-flex">
+                                <h4 class="profile__list-title m-0 p-0" txt-key="txtProfileListItemName">Name</h4>
+                            </div>
+                            <div class="personal__list-item col-12 col-sm-7 d-flex flex-column flex-lg-row align-items-center flex-wrap p-0 position-relative"><input type="text" value="" name="firstName" id="personal-input-firstname-id" class="personal__list-input"><input type="text" value="" name="lastName" id="personal-input-lastname-id" class="personal__list-input">
+                                <div id="error-name-id" class="personal__notify-wrap d-none"><span class="personal__notify error" txt-key="txtErrorName">Please fill in your name<br></span></div>
+                            </div>
+                        </li>
+                        <li class="personal__list-row row">
+                            <div class="col-12 col-sm-5 p-0 d-flex flex-column align-items-start">
+                                <h4 class="profile__list-title m-0 p-0" txt-key="txtProfileListItemPrimary">Primary Email<br></h4>
+                                <p class="profile-text" txt-key="txtProfileItemPrimaryText">This email is used as a primary support contact. In case you want to change your primary email&nbsp; address, you will need to verify your new email.<br></p>
+                            </div>
+                            <div class="col-12 col-sm-7 d-flex flex-column flex-lg-row align-items-end align-items-lg-start p-0 personal__email-wrap"><input type="email" id="personal-email-input" class="personal__email-input col-12 col-lg-9" disabled=""><button class="btn btn-primary bg-transparent personal__btn-change w-auto" id="personal-email-change" type="button" txt-key="txtChangeBtn">Change<br></button></div>
+                        </li>
+                        <li class="personal__list-row row flex-column align-items-start flex-sm-row align-items-sm-center">
+                            <div class="col-12 col-sm-5 p-0 d-flex">
+                                <h4 class="profile__list-title m-0 p-0" txt-key="txtProfileListItemMobile">Mobile Phone<br></h4>
+                            </div>
+                            <div class="col-12 col-sm-7 p-0 personal__list-item"><input name="phone" value="" id="personal-tel-input" class="personal__list-input personal__tel-input mb-0" placeholder="Add mobile number"><span class="personal__notify personal__notify-tell d-none">Please enter a valid phone number<br></span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <p txt-key="txtFooterCopyright"><strong>© 2022 - Gamanet a.s.</strong> All rights reserved. </p>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                        <ul class="d-flex justify-content-end justify-content-sm-center justify-content-md-end justify-content-lg-end justify-content-xl-end">
+                            <li><a href="#" txt-key="txtFooterLinkPrivacy">Privacy Policy</a></li>
+                            <li><a href="#" txt-key="txtFooterLinkTerms">Terms &amp; Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="module" src="assets/js/personal-info.mjs"></script>
+</body>
+
+</html>

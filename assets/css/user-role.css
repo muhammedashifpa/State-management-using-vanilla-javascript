@@ -1,0 +1,69 @@
+.input__add {
+}
+
+.input__add-label {
+  padding: 0.625rem 1rem 0.625rem 1rem;
+  border: 0.0625rem solid #f48220;
+  border-radius: 0.5rem;
+  color: #f48220;
+  position: relative;
+  cursor: pointer;
+  font-size: 0.875rem;
+  gap: 0.5rem;
+  min-width: 6rem;
+}
+
+@media (max-width: 991px) {
+  .input__add-label {
+    padding: 0.5rem 0.625rem 0.5rem 0.625rem;
+    font-size: 0.75rem;
+    gap: 0.5rem;
+  }
+}
+
+.input__add-label:hover {
+  background-color: #f3f3f3;
+}
+
+@media (max-width: 991px) {
+  .input__add-label img {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}
+
+.user__role-accordion {
+  margin-top: 2rem;
+}
+
+.user__accordion-title {
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #464544;
+}
+
+.accordion__arrow-wrap {
+  border-left: 0.0625rem solid #EAE9E9;
+  padding-left: 1.5rem;
+}
+
+.accordion__arrow-wrap img {
+  transform: rotate(180deg);
+  background-color: #FAFAFA;
+  border-radius: 50%;
+}
+
+.accordion__title-link.collapsed > .accordion__arrow-wrap img {
+  transform: rotate(0deg);
+  background-color: #ffffff;
+}
+
+.card-header {
+  background-color: #ffffff;
+}
+
+.card-body {
+  background-color: #EAE9E9;
+}
+

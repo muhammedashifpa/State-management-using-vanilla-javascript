@@ -1,0 +1,151 @@
+.card {
+  border-radius: 0.9375rem;
+}
+
+.go-to-site-btn {
+  border-radius: 0.5rem;
+  color: #f48220;
+  background-color: white;
+  border-color: #dddada;
+}
+
+.custom-chechBox {
+  opacity: 0;
+}
+
+.custom-chechBox-label {
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 0.125rem solid #827f7d;
+  border-radius: 0.25rem;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  top: 0.125rem;
+  background-color: #ffffff;
+  z-index: 2;
+}
+
+.custom-chechBox:checked + .custom-chechBox-label {
+  background-image: url(checkbox_custom.svg);
+  background-size: cover;
+  border: none;
+}
+
+.custom-chechBox:checked + .custom-chechBox-label:hover {
+  box-shadow: 0 0 0 0.125rem #fbf2e9;
+}
+
+.custom-chechBox + .custom-chechBox-label:hover {
+  box-shadow: 0 0 0 0.125rem #d8d6d5;
+}
+
+.custom-chechBox + .custom-chechBox-label:focus {
+  box-shadow: 0 0 0 0.125rem #f9e7d8;
+}
+
+.custom-chechBox:focus + .custom-chechBox-label {
+  box-shadow: 0 0 0 0.125rem #d8d6d5;
+}
+
+.custom-chechBox:checked + .custom-chechBox-label:disabled {
+  background-image: url(checkbox-disabled.svg);
+}
+
+/* .newAccount-btn-signUp {
+  margin-top: 4.625rem;
+} */
+
+.newAccount-btn-back {
+  color: #1581e2;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 128px;
+  height: 40px;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newAccount-btn-back:hover {
+  background-color: #f0f8ff;
+  color: #1581e2;
+}
+
+.newAccount-btn-back:focus {
+  color: #0066c2;
+  background-color: #d7ecff !important;
+  border: none !important;
+  box-shadow: none;
+}
+
+.newAccount-btn-back.disabled {
+  color: #d0cecc !important;
+  pointer-events: none;
+}
+
+.privacy-text-wrap {
+  height: 21.25rem;
+  /*overflow-y: scroll;*/
+  /*scrollbar-width: thin;*/
+}
+
+.privacy-text-wrap::-webkit-scrollbar {
+  background-color: #fff;
+  width: 0.25rem;
+}
+
+.privacy-text-wrap::-webkit-scrollbar-thumb {
+  background-color: #d8d6d5;
+  border-radius: 0.125rem;
+}
+
+.privacy-text-decor:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1.875rem;
+  bottom: 8.6875rem;
+  left: 0;
+  background: linear-gradient(180deg, rgba(250, 250, 250, 0) 0%, #fafafa 100%);
+}
+
+.subtitle-link-verification {
+  padding: 0 0.1875rem;
+  color: #827f7d;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.verification-text {
+  padding: 0 0 1rem !important;
+  border: none !important;
+  font-weight: 600;
+}
+
+.verification-text-info span {
+  font-weight: 600;
+}
+
+.verification-code-wrap {
+  padding-top: 1.5rem;
+}
+
+.verification-btn {
+  padding-top: 1.5rem;
+}
+
+.privacy-text-wrap.privacy-text-decor {
+  margin-bottom: 0.125rem;
+}
+
+.new__password-save {
+  margin-top: 6.3125rem !important;
+}
+
+.password-recovery-btn {
+  margin-top: 16.3125rem;
+}
+
